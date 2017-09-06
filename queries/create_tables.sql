@@ -1,4 +1,4 @@
-create table if not exists inmates (
+create table if not exists inmates_raw (
     Id serial primary key,
     Age_At_Booking integer,
     Bail_Amount varchar(512) null,
