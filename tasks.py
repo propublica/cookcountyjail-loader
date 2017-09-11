@@ -96,6 +96,12 @@ def drop_tables(ctx):
 
 
 @task
+def clear_data(ctx):
+    print('clear')
+    db.query_file('queries/clear.sql')
+
+
+@task
 def fetch(ctx):
     print('fetch')
     ctx.run('aws s3 sync s3://cookcountyjail.il.propublica.org/daily/ data/raw')
